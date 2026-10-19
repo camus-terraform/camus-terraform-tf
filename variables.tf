@@ -1,5 +1,20 @@
-variable "github_oauth_token_id"{
-    description = "ID del token OAuth para conectar GitHub con Terraform Cloud"
-    type = string
-    sensitive = true
+variable "tfc_org" {
+  description = "Organización de HCP Terraform"
+  default     = "camus-labs-dev"
+}
+
+variable "github_org" {
+  description = "Organización de GitHub"
+  default     = "camus-terraform"
+}
+
+variable "org_slug" {
+  description = "Prefijo para todos los recursos"
+  default     = "camus"
+}
+
+variable "github_token" {
+  description = "Token de GitHub que se le pasa al workspace camus-github"
+  type        = string
+  sensitive   = true
 }
